@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <header android:fragment="ru.logasoft.zaal.inventory.SettingsActivity$Prefs1Fragment"
+        android:icon="@drawable/ic_menu_mylocation"
+        android:title="Оборудование"
+        android:summary="Тип используемого сканера и пр." />
+
+
+
+</preference-headers>

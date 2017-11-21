@@ -1,9 +1,12 @@
 package ru.logasoft.zaal.inventory;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -85,9 +88,20 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_offline_create) {
-            Intent Intent = new Intent(this, SettingsActivity.class);
-            startActivity(Intent);
+
+            ConstraintLayout mainLayout = (ConstraintLayout) findViewById(R.id.main_container);
+            LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View layout = inflater.inflate(R.layout.offline_create_layout, null);
+            mainLayout.removeAllViews();
+            mainLayout.addView(layout);
+
         } else if (id == R.id.nav_offline_inventory) {
+
+            ConstraintLayout mainLayout = (ConstraintLayout) findViewById(R.id.main_container);
+            LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View layout = inflater.inflate(R.layout.offline_inventory_layout, null);
+            mainLayout.removeAllViews();
+            mainLayout.addView(layout);
 
         } else if (id == R.id.nav_online_create) {
 
